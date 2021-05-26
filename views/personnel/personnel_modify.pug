@@ -1,0 +1,58 @@
+extends ../layout
+
+block content
+    h1.title_1 직원 관리
+    // main 시작
+    div.main
+        //main_content navbar
+        div.main_nav
+            nav.navbar.navbar-light.bg-light
+            .container-fluid
+                a.main_a.navbar-brand(href='/personnel') 인사 정보 등록
+                a.main_a.navbar-brand(href='/personnel/personnel_modify') 인사 정보 수정
+                a.main_a.navbar-brand(href='/personnel/personnel_search') 인사 정보 조회
+                a.main_a.navbar-brand(href='/personnel/department_info') 부서 조회
+                a.main_a.navbar-brand(href='/personnel/position_update') 직급 변경
+                a.main_a.navbar-brand(href='/personnel/department_update') 부서 변경
+        //main_content 
+        div.main_conent
+            h3.title_2 인사 정보 수정
+            form(method='post').row.row-cols-lg-auto.g-3.align-items-center
+                table.table.table-bordered
+                        tbody
+                            tr
+                                td 사번
+                                td 
+                                    input(type='text' name='employee_id' placeholder='ex) 3')
+                                td 직원 이름
+                                td 
+                                    input(type='text' name='employee_name')
+                            tr
+                                td 주민등록번호
+                                td 
+                                    input(type='text' name='ihidnum')
+                                td 최종 학력
+                                td 
+                                    input(type='text' name='final_graduate' placeholder='ex) 고졸')
+                            tr  
+                                td 입사 일자
+                                td 
+                                    input(type='date' name='join_day')
+                                td 퇴사 일자
+                                td 
+                                    input(type='date' name='end_day')
+                            tr
+                                td 웹 아이디
+                                td 
+                                    input(type='text' name='web_manage_id')
+                                td 비밀번호
+                                td 
+                                    input(type='text' name='pass_word')
+                            tr
+                                td 관리자
+                                td 
+                                    input(type='text' name='master_check' placeholder='ex) Y')
+                .row
+                    button.btn.btn-primary(type='submit') 변경
+            
+

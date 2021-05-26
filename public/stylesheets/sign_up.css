@@ -1,0 +1,532 @@
+.mediaViewInfo {
+    --web-view-name: Sign up;
+    --web-view-id: Sign_up;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+:root {
+    --web-view-ids: Sign_up;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+#Sign_up {
+    position: absolute;
+    width: 1600px;
+    height: 960px;
+    background-color: rgba(240,240,247,1);
+    overflow: hidden;
+    --web-view-name: Sign up;
+    --web-view-id: Sign_up;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+#_163 {
+    fill: rgba(255,255,255,1);
+}
+._163 {
+    position: absolute;
+    overflow: visible;
+    width: 800px;
+    height: 960px;
+    left: 800px;
+    top: 0px;
+}
+#Logo {
+    left: 1083px;
+    top: 118px;
+    position: absolute;
+    overflow: visible;
+    width: 220px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    color: rgba(67,66,93,1);
+    letter-spacing: 2px;
+}
+#employee_name {
+    position: absolute;
+    width: 399.08px;
+    height: 29.809px;
+    left: 1000.92px;
+    top: 260px;
+    overflow: visible;
+    
+}
+# {
+    left: 6.08px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 27px;
+    white-space: nowrap;
+    line-height: 25px;
+    margin-top: -5px;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: rgba(67,66,93,1);
+}
+#_297 {
+    fill: transparent;
+    stroke: rgba(233,233,240,1);
+    stroke-width: 2px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+._297 {
+    overflow: visible;
+    position: absolute;
+    width: 399.08px;
+    height: 2px;
+    left: 0px;
+    top: 29.809px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Please_complete_to_create_your {
+    opacity: 0.5;
+    left: 1051px;
+    top: 176px;
+    position: absolute;
+    overflow: visible;
+    width: 299px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgba(77,79,92,1);
+}
+#Already_have_an_account_Sign_i {
+    left: 1105px;
+    top: 901px;
+    position: absolute;
+    overflow: visible;
+    width: 209px;
+    white-space: nowrap;
+    --web-animation: fadein 0.4s ease-out;
+    --web-action-type: page;
+    --web-action-target: Login.html;
+    cursor: pointer;
+    line-height: 25px;
+    margin-top: -5px;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(67,66,93,1);
+    text-decoration: underline;
+}
+#Term_of_use_Privacy_policy {
+    left: 1139px;
+    top: 926px;
+    position: absolute;
+    overflow: visible;
+    width: 123px;
+    white-space: nowrap;
+    line-height: 13px;
+    margin-top: -1px;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    color: rgba(67,66,93,1);
+}
+#sign_up {
+    position: absolute;
+    width: 185px;
+    height: 50px;
+    left: 1116px;
+    top: 841px;
+    overflow: visible;
+    --web-animation: fadein 0.4s ease-out;
+    --web-action-type: page;
+    --web-action-target: Dashboard_Interface__Look___Feel_.html;
+    cursor: pointer;
+}
+#_166 {
+    fill: rgba(67,66,93,1);
+    stroke: rgba(67,66,93,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+._166 {
+    position: absolute;
+    overflow: visible;
+    width: 185px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+}
+#Sign_up_b {
+    left: 61px;
+    top: 14px;
+    position: absolute;
+    overflow: visible;
+    width: 57px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgba(255,255,255,1);
+}
+#ihidnum {
+    position: absolute;
+    width: 400px;
+    height: 29.809px;
+    left: 1000px;
+    top: 335px;
+    overflow: visible;
+}
+#_b {
+    left: 6.08px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 79px;
+    white-space: nowrap;
+    line-height: 25px;
+    margin-top: -5px;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(67,66,93,1);
+}
+#_297_ca {
+    fill: transparent;
+    stroke: rgba(233,233,240,1);
+    stroke-width: 2px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+._297_ca {
+    overflow: visible;
+    position: absolute;
+    width: 400px;
+    height: 2px;
+    left: 0px;
+    top: 29.809px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#department_id {
+    position: absolute;
+    width: 400px;
+    height: 29.809px;
+    left: 1000px;
+    top: 411px;
+    overflow: visible;
+}
+#_cc {
+    left: 6.08px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 27px;
+    white-space: nowrap;
+    line-height: 25px;
+    margin-top: -5px;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(67,66,93,1);
+}
+#_297_cd {
+    fill: transparent;
+    stroke: rgba(233,233,240,1);
+    stroke-width: 2px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+._297_cd {
+    overflow: visible;
+    position: absolute;
+    width: 400px;
+    height: 2px;
+    left: 0px;
+    top: 29.809px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#web_manage_id {
+    position: absolute;
+    width: 400px;
+    height: 29.809px;
+    left: 1000px;
+    top: 487px;
+    overflow: visible;
+}
+#_cf {
+    left: 6.08px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 40px;
+    white-space: nowrap;
+    line-height: 25px;
+    margin-top: -5px;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(67,66,93,1);
+}
+#_297_cg {
+    fill: transparent;
+    stroke: rgba(233,233,240,1);
+    stroke-width: 2px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+._297_cg {
+    overflow: visible;
+    position: absolute;
+    width: 400px;
+    height: 2px;
+    left: 0px;
+    top: 29.809px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#pass_word {
+    position: absolute;
+    width: 400px;
+    height: 29.809px;
+    left: 1000px;
+    top: 563px;
+    overflow: visible;
+}
+#_ci {
+    left: 6.08px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 53px;
+    white-space: nowrap;
+    line-height: 25px;
+    margin-top: -5px;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(67,66,93,1);
+}
+#_297_cj {
+    fill: transparent;
+    stroke: rgba(233,233,240,1);
+    stroke-width: 2px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+._297_cj {
+    overflow: visible;
+    position: absolute;
+    width: 400px;
+    height: 2px;
+    left: 0px;
+    top: 29.809px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#position_id {
+    position: absolute;
+    width: 400px;
+    height: 30.809px;
+    left: 1000px;
+    top: 638px;
+    overflow: visible;
+}
+#_ {
+    left: 6.08px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 82px;
+    white-space: nowrap;
+    line-height: 25px;
+    margin-top: -5px;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(67,66,93,1);
+}
+#_297_cm {
+    fill: transparent;
+    stroke: rgba(233,233,240,1);
+    stroke-width: 2px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+._297_cm {
+    overflow: visible;
+    position: absolute;
+    width: 400px;
+    height: 2px;
+    left: 0px;
+    top: 30.809px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#final_graduate {
+    position: absolute;
+    width: 400px;
+    height: 29.809px;
+    left: 1000px;
+    top: 715px;
+    overflow: visible;
+}
+#_co {
+    left: 6.08px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 53px;
+    white-space: nowrap;
+    line-height: 25px;
+    margin-top: -5px;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(67,66,93,1);
+}
+#_297_cp {
+    fill: transparent;
+    stroke: rgba(233,233,240,1);
+    stroke-width: 2px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+._297_cp {
+    overflow: visible;
+    position: absolute;
+    width: 400px;
+    height: 2px;
+    left: 0px;
+    top: 29.809px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#btn_signup {
+    position: absolute;
+    width: 80px;
+    height: 25px;
+    left: 1410px;
+    top: 415px;
+    overflow: visible;
+}
+#_166_cr {
+    fill: rgba(67,66,93,1);
+    stroke: rgba(67,66,93,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+._166_cr {
+    position: absolute;
+    overflow: visible;
+    width: 80px;
+    height: 25px;
+    left: 0px;
+    top: 0px;
+}
+#__cs {
+    left: 25.138px;
+    top: 3px;
+    position: absolute;
+    overflow: visible;
+    width: 29px;
+    white-space: nowrap;
+    line-height: 25px;
+    margin-top: -5px;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(255,255,255,1);
+}
+#_560_cu {
+    fill: url(#_560_cu);
+}
+._560_cu {
+    position: absolute;
+    overflow: visible;
+    width: 800px;
+    height: 960px;
+    left: 0px;
+    top: 0px;
+}
+#_243 {
+    position: absolute;
+    width: 800px;
+    height: 960px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+#_176_cx {
+    fill: url(#_176_cx);
+}
+._176_cx {
+    display: none;
+    position: absolute;
+    overflow: visible;
+    width: 800px;
+    height: 960px;
+    left: 0px;
+    top: 0px;
+}
+#_4 {
+    position: absolute;
+    width: 800px;
+    height: 960px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}

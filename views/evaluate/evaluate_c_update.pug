@@ -1,0 +1,71 @@
+extends ../layout
+
+block content
+    h1.title_1 평가 입력 및 수정
+    // main 시작
+    div.main
+        //main_content navbar
+        div.main_nav
+            nav.navbar.navbar-light.bg-light
+            .container-fluid
+                a.main_a.navbar-brand(href='/evaluate') 평가 조회
+                a.main_a.navbar-brand(href='/evaluate/evaluate_avg') 항목 평균 조회
+                a.main_a.navbar-brand(href='/evaluate/submit_e') 직원 평가 정보 입력
+                a.main_a.navbar-brand(href='/evaluate/update_e') 직원 평가 정보 수정
+                a.main_a.navbar-brand(href='/evaluate/submit_c') 고객 평가 정보 입력
+                a.main_a.navbar-brand(href='/evaluate/update_c') 고객 평가 정보 수정
+                a.main_a.navbar-brand(href='/evaluate/submit_p') PM 평가 정보 입력
+                a.main_a.navbar-brand(href='/evaluate/update_p') PM 평가 정보 수정
+        //main_content 
+        div.main_conent
+            h3.title_2 고객 평가 정보 수정
+            table.table.test
+            //- <form method="post">
+            .row 
+                label 직원 아이디(피평가자)
+            .col
+                input#employee_id(type='text', name='employee_id',placeholder='employee_id') 
+            .row 
+                label 프로젝트 아이디
+            .col
+                input#project_id(type='text', name='project_id',placeholder='project_id')                    
+            .row 
+                label 평가 아이디
+            .col
+                input#customer_evl_id(type='text', name='customer_evl_id',placeholder='customer_evl_id')
+            .row 
+                label 업무수행 등급
+            .col
+                input#customer_duty_grade(type='number', name='customer_duty_grade',placeholder='1~10')
+            .row
+                label 업무수행 평가내용
+            .col
+                input#customer_duty_evl_content(type='text', name='customer_duty_evl_content',placeholder='1000자 이내 입력')
+            .row
+                label 의사소통 등급
+            .col
+                input#customer_cmnct_grade(type='number', name='customer_cmnct_grade',placeholder='1~10')
+            .row 
+                label 의사소통 평가내용
+            .col
+                input#customer_cmnct_evl_content(type='text', name='customer_cmnct_evl_content',placeholder='1000자 이내 입력')
+            .row 
+                label 평가일
+            .col
+                input#customer_evl_start(type='date', name='customer_evl_start',placeholder='customer_evl_start')
+            .row
+                label 평가자 고객 id
+            .col
+                input#customer_id(type='text', name='customer_id',placeholder='customer_id')
+            .row
+                input#button_update(type="submit" value="수정")
+            script(src="https://unpkg.com/axios/dist/axios.min.js")
+            script(src = '/javascripts/evaluate_c_update.js')
+           
+           
+    
+
+
+
+            
+

@@ -1,0 +1,37 @@
+extends ../layout
+
+include ../includes/_paginate
+
+block content
+  .container
+
+    h1.main-title
+      | 프로젝트 목록 보기
+      if rows.length > 0
+        .small Total #{rows.length} project(s)
+    
+    form.float-right(action='/projects', method='GET')
+      input(type='date', value='YYYY-MM-DD', name="start")
+      | 
+      input(type='date', value='YYYY-MM-DD', name="end")
+      | 
+      button.btn.btn-primary(type="submit") 조회
+
+    // main 시작
+    div.main
+      //main_content 
+      div.main_conent
+        
+        if rows.length < 1
+          .alert.alert-info No projects available yet
+        else
+          .projects
+            each project in rows
+              .project
+                a.title(href=`/projects/${project.project_id}`)=project.project_id
+                .content=project.project_name
+                .content=project.project_type
+                .content=project.project_start_date
+                .content=project.project_terminate_date
+                .content=project.customer_id
+                p

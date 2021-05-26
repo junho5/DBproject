@@ -1,0 +1,92 @@
+extends ../layout
+
+block content
+    h1.title_1 프로젝트 관리
+    // main 시작
+    div.main
+      //main_content navbar
+      div.main_nav
+        nav.navbar.navbar-light.bg-light
+        .container-fluid
+          a.main_a.navbar-brand(href='/project') 프로젝트 정보 등록
+          a.main_a.navbar-brand(href='/project/modify') 프로젝트 정보 수정
+          a.main_a.navbar-brand(href='/project/view') 프로젝트 정보 조회
+        //main_content 
+      div.main_conent
+          h3.title_2 프로젝트 정보 조회
+           //검색창 시작
+          div.views
+            form#project_view.row.row-cols-lg-auto.g-3.align-items-center(method = 'post')
+                .col-2
+                    label 검색어
+                .col-3
+                    select.searchhr(name='searchhr')
+                      option#project_id(values='project_id') 프로젝트 번호
+                .col-4
+                    input#search.form-control(type='text' name='search')
+                .col-2
+                    button.btn.btn-primary(type='submit') 조회
+            //table 시작
+            if views
+              for view in views[0]
+                table.table.project
+                  tr
+                    th 프로젝트 번호
+                    td #{view.project_id}
+                    th 프로젝트 명
+                    td #{view.project_name}
+                  tr
+                    th 착수 일자
+                    td #{view.project_start_date}
+                    th 종료 일자
+                    td #{view.project_terminate_date}
+                    th 발주처
+                    td #{view.customer_name}
+                h3.title_2 평가 정보 
+                table.table.customer 
+                  thead 
+                    tr 
+                      th 고객 평가 번호
+                      th 업무 수행 평가 점수
+                      th 코멘트
+                      th 커뮤니케이션 평가 점수
+                      th 코멘트
+                  for view in views[1]
+                    tr 
+                      td #{view.customer_evl_id}
+                      td #{view.customer_duty_grade}
+                      td #{view.customer_duty_evl_content}
+                      td #{view.customer_cmnct_grade} 
+                      td #{view.customer_cmnct_evl_content}
+                table.table.pm
+                  thead 
+                    tr
+                      th pm 평가 번호
+                      th 업무 수행 평가 점수
+                      th 코멘트
+                      th 커뮤니케이션 평가 점수
+                      th 코멘트
+                  for view in views[2]
+                    tr 
+                      td #{view.pm_evl_id}
+                      td #{view.pm_duty_grade}
+                      td #{view.pm_duty_evl_content}
+                      td #{view.pm_cmnct_grade}
+                      td #{view.pm_cmnct_evl_content}
+                table.table.employee        
+                  thead 
+                    tr 
+                      th 동료 평가 번호
+                      th 업무 수행 평가 점수
+                      th 코멘트
+                      th 커뮤니케이션 평가 점수
+                      th 코멘트
+                  for view in views[3] 
+                    tr 
+                      td #{view.employee_evl_id}
+                      td #{view.employee_duty_grade}
+                      td #{view.employee_duty_evl_content}
+                      td #{view.employee_cmnct_grade}
+                      td #{view.employee_cmnct_evl_content}
+
+            

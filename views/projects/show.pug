@@ -1,0 +1,140 @@
+extends ../layout
+
+block content
+  .container
+    h1.title_1 프로젝트 관리
+    // main 시작
+    div.main
+      //main_content navbar
+      div.main_nav
+        nav.navbar.navbar-light.bg-light
+        .container-fluid
+          a.main_a.navbar-brand(href='../project') 프로젝트 정보 등록
+          a.main_a.navbar-brand(href='../project/modify') 프로젝트 정보 수정
+          a.main_a.navbar-brand(href='../project/view') 프로젝트 정보 조회
+        //main_content 
+        div.main_conent
+          h3.title_2 프로젝트 정보 조회
+           //검색창 시작
+          //form.row.row-cols-lg-auto.g-3.align-items-center
+            .col-1
+            .col-xs-2
+              label 검색어
+            .col-2#a
+              select.input#inlineFormSelectPref.form-control(aria-label='Default select example')
+                option 프로젝트 번호
+              select(aria-label='project_id')
+                option 프로젝트 번호
+            //- .col-2
+            //-   input#inlineFormSelectPref.form-control(type='text')
+            //- //- .form-check
+            //- //- input.form-check-input(type='checkbox', value='')
+            //- //- label.form-check-label(for='flexCheckDefault')
+            //- //- |전체 프로젝트 보기(*종료 프로젝트 포함)
+            //- .col-3
+            //-   button.btn.btn-primary.btn-sm(type='submit' float: right) 검색
+            .col-2#c
+              form.search-form(action='search' method='get')
+                input.search-bar(type='text' name='query' placeholder='project_1')
+                input.search-button.btn.btn-primary.btn.sm(type='submit' value='검색')
+            .col-3
+            .checkbox.small#a
+              label
+                input(type='checkbox' checked="checked")
+                |  전체 프로젝트 보기(*종료 프로젝트 포함) 
+              
+          //table 시작
+          form(action='/show', method='GET')
+            each project in rows[0]
+              table.table.table-bordered
+                tbody
+                  #users.forEach(function(value))
+                  tr
+                    td 프로젝트 번호
+                    td
+                      .content=project.project_id
+
+                    td 프로젝트 명
+                    td
+                      .content=project.project_name
+                  tr
+                    td 착수일자
+                    td 
+                      .content=project.project_start_date
+                    td 종료일자
+                    td
+                      .content=project.project_terminate_date
+                  tr
+                    td 발주처
+                    td 
+                      .content=project.customer_id
+                    td Project Manager
+                    
+                    each projects in rows[1]
+                      td #{projects.project_manager_id}
+
+            //.col-4
+              button(onclick="window.open='http://localhost:3000/evaluate'") 평가 정보 조회하기(*완료 프로젝트만 조회 가능)
+              input(type='button' value='평가 정보 조회하기(*완료 프로젝트만 조회 가능)' onclick="location.href='http://localhost:3000/evaluate'")
+              button.btn.btn-outline-primary(type='submit') 평가 정보 조회하기(*완료 프로젝트만 조회 가능)
+              meta(http-equiv='refresh' content='0;url=http://localhost:3000/evaluate')
+                          
+
+
+            h2.title_2 팀원 목록  
+            //- .form-check
+            //- input#flexCheckDefault.form-check-input(type='checkbox', value='')
+            //- label.form-check-label(for='flexCheckDefault')
+            //- | *전체 투입 인력 보기(종료인력 포함)
+            //.checkbox.small#b
+                label
+                  input(type='checkbox' checked="checked")
+                  |  *전체 투입 인력 보기(완료 인력 포함)
+            table.table.test
+              tr
+                th 상태
+                th 이름
+                th 사번
+                th 부서
+                th 직위
+                th 직무
+                th 시작일
+                th 종료일
+              each index in rows[2]
+                tr
+                  th #{index.in_office}
+                  th #{index.employee_name}
+                  th #{index.employee_id}
+                  th #{index.department_name}
+                  th #{index.role_id}
+                  th #{index.role_name}
+                  th #{index.start}
+                  th #{index.end}
+                //- td button.btn.btn-primary(type='submit') 경력/기술조회
+            h2.title_2 전체 팀원 목록
+            button.btn.btn-primary(type = 'button' onclick = 'toggleText()') 조회
+              //- .col-3
+              //-   button.btn.btn-primary(type='submit') 경력/기술조회
+            table.table#info(style='display: none')
+              tr
+                th 상태
+                th 이름
+                th 사번
+                th 부서
+                th 직위
+                th 직무
+                th 시작일
+                th 종료일
+              each index in rows[3]
+                tr
+                  th #{index.in_office}
+                  th #{index.employee_name}
+                  th #{index.employee_id}
+                  th #{index.department_name}
+                  th #{index.role_id}
+                  th #{index.role_name}
+                  th #{index.start}
+                  th #{index.end}
+            script
+              include info.js
+

@@ -1,0 +1,108 @@
+extends ../layout
+
+block content
+    h1.title_1 직원 관리
+    // main 시작
+    div.main
+        //main_content navbar
+        div.main_nav
+            nav.navbar.navbar-light.bg-light
+            .container-fluid
+                a.main_a.navbar-brand(href='/personnel') 인사 정보 등록
+                a.main_a.navbar-brand(href='/personnel/personnel_modify') 인사 정보 수정
+                a.main_a.navbar-brand(href='/personnel/personnel_search') 인사 정보 조회
+                a.main_a.navbar-brand(href='/personnel/department_info') 부서 조회
+                a.main_a.navbar-brand(href='/personnel/position_update') 직급 변경
+                a.main_a.navbar-brand(href='/personnel/department_update') 부서 변경
+        //main_content 
+        div.main_content
+            h3.title_2 인사 정보 조회
+            //검색창 시작
+            div.personnels
+              form#personnel_search.row.row-cols-lg-auto.g-3.align-items-center(method = 'post')
+                  .col-2 
+                      label 검색어
+                  .col-3
+                      select.searchhr(name= 'searchhr')
+                        option#employee_id(values ='employee_id' ) 사번
+                        option#employee_name(values ='employee_name') 직원이름
+                  .col-4
+                      input#search.form-control(type='text' name='search')
+                  .col-2
+                      button.btn.btn-primary(type='submit') 조회
+              //table 시작
+              if personnels
+                for personnel in personnels[0]
+                  table.table.emp
+                    tr
+                      th 이름
+                      td #{personnel.employee_name}
+                      th 사번
+                      td #{personnel.employee_id}
+                    tr
+                      th 주민등록 번호
+                      td #{personnel.ihidnum}
+                      th 재직 여부
+                      td #{personnel.In_office}
+                    tr
+                      th 입사일자
+                      td #{personnel.join_day}
+                      th 최종학력
+                      td #{personnel.final_graduate}
+
+                    tr
+                      th 퇴사 일자
+                      td #{personnel.end_day}
+                      
+                  table.table.project 
+                    thead 
+                      tr 
+                        th 프로젝트 ID 
+                        th 프로젝트 이름
+                        th 직무
+                        th 프로젝트 참여일
+                        th 프로젝트 종료일
+                    for personnel in personnels[1]
+                      tr 
+                        td #{personnel.project_id}
+                        td #{personnel.project_name}
+                        td #{personnel.developer_role_name}
+                        td #{personnel.project_participate_date} 
+                        td #{personnel.project_participate_end_date}
+                  table.table.career
+                    thead 
+                      tr
+                        th 경력ID 
+                        th 시작일
+                        th 종료일
+                        th 경력명
+                        th 내용
+                    for personnel in personnels[2]
+                      tr 
+                        td #{personnel.career_id}
+                        td #{personnel.career_start_date}
+                        td #{personnel.career_end_date}
+                        td #{personnel.career_name}
+                        td #{personnel.career_content}
+                
+                  table.table.skill        
+                    thead 
+                      tr 
+                        th 기술 ID 
+                        th 기술 이름
+                        th 기술 등급
+                        th 기술 내용
+                    for personnel in personnels[3] 
+                      tr 
+                        td #{personnel.skill_id}
+                        td #{personnel.skill_name}
+                        td #{personnel.skill_rank}
+                        td #{personnel.skill_content}
+              else
+                    div no data
+                  
+              
+              
+
+
+              

@@ -1,0 +1,35 @@
+doctype html
+html 
+    head
+      title Document
+      meta(charset='UTF-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet', href='/stylesheets/login.css')
+
+    body
+      #Sign_in_page
+        #text
+          h1#Logo
+            span 2조 주식회사
+          p#Forgot_Password(onclick='application.goToTargetView(event)')
+            span Forgot Password
+          p#Term_of_use_Privacy_policy
+            span Term of use. Privacy policy
+          <form method="post">
+          #loginform
+            #id_area
+              input(type='text', name='web_manage_id', placeholder='아이디')
+            #password_area
+              input(type='password', name='pass_word', placeholder='비밀번호')
+            #login_area
+              input#login_btn(type='submit', name='login_button', value='Login')
+            #signup_area
+              input#signup_btn(type='button', name='Sign_up', value='Signup',onclick ="location.href='sign_up'" )
+        #_244
+          svg._176_ci
+            lineargradient#_176_ci(spreadmethod='pad', x1='0.897', x2='0.206', y1='0.14', y2='0.877')
+              stop(offset='0', stop-color='#242348', stop-opacity='1')
+              stop(offset='1', stop-color='#5a55aa', stop-opacity='1')
+            rect#_176_ci(rx='0', ry='0', x='0', y='0', width='800', height='960')
+          img#_4(src='/images/_4.png', srcset='/images/_4.png 1x, /images/_4@2x.png 2x')

@@ -1,0 +1,166 @@
+#_176_ci {
+    fill: url(#_176_ci);
+}
+._176_ci {
+    position: absolute;
+    overflow: visible;
+    width: 800px;
+    height: 960px;
+    left: 0px;
+    top: 0px;
+}
+#_4 {
+    position: absolute;
+    width: 800px;
+    height: 960px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+#text {
+    position: absolute;
+    width: 800px;
+    height: 960px;
+    right: 0px;
+    top: 0px;
+    overflow: visible;
+}
+#_163 {
+    fill: rgba(255,255,255,1);
+}
+._163 {
+    position: absolute;
+    overflow: visible;
+    width: 800px;
+    height: 960px;
+    left: 0px;
+    top: 0px;
+}
+#Sign_in_page {
+    position: absolute;
+    width: 1600px;
+    height: 960px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    --web-view-name: Sign in page;
+    --web-view-id: Sign_in_page;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+#Logo {
+    left: 283px;
+    top: 234px;
+    position: absolute;
+    overflow: visible;
+    width: 220px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    color: rgba(67,66,93,1);
+    letter-spacing: 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+#Forgot_Password {
+    left: 498px;
+    top: 460px;
+    position: absolute;
+    overflow: visible;
+    width: 105px;
+    white-space: nowrap;
+    --web-animation: fadein 0.4s ease-out;
+    --web-action-type: page;
+    --web-action-target: Forgot_your_password.html;
+    cursor: pointer;
+    line-height: 25px;
+    margin-top: -5px;
+    text-align: right;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(67,66,93,1);
+}
+#Term_of_use_Privacy_policy {
+    left: 339px;
+    top: 926px;
+    position: absolute;
+    overflow: visible;
+    width: 123px;
+    white-space: nowrap;
+    line-height: 13px;
+    margin-top: -1px;
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    color: rgba(67,66,93,1);
+}
+#id_area {
+    position: absolute;
+    width: 400px;
+    height: 29.809px;
+    right: 0px;
+    top: 0px;
+    overflow: visible;
+}
+#password_area {
+    position: absolute;
+    width: 400px;
+    height: 29.809px;
+    left: 0px;
+    top: 40px;
+    overflow: visible;
+}
+#login_area {
+    position: absolute;
+    width: 185px;
+    height: 50px;
+    left: 0px;
+    top: 180px;
+    overflow: visible;
+}
+#signup_area {
+    position: absolute;
+    width: 185px;
+    height: 50px;
+    left: 200px;
+    top: 180px;
+    overflow: visible;
+    --web-animation: fadein 0.4s ease-out;
+    --web-action-type: page;
+    --web-action-target: Sign_up_page.pug;
+    cursor: pointer;
+}
+
+#loginform {
+    position: absolute;
+    width: 400px;
+    height: 29.809px;
+    left: 200px;
+    top: 373px;
+    overflow: visible;
+}
+#signup_btn {
+    width :185px;
+    height :50px;
+    cursor: pointer;
+    
+
+}
+#login_btn {
+    width :185px;
+    height :50px;
+    background-color: rgba(67,66,93,1)
+
+}

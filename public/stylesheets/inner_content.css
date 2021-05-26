@@ -1,0 +1,27 @@
+/*내부 div 부분*/
+.main {
+    background-color: #fff;
+    width: 1100px;
+    height: 900px;
+    margin: 30px auto;
+    display:flex;
+}
+
+.main_nav {
+    width: 200px;
+    height:900px;
+    display:flex;
+}
+
+.main_conent {
+    margin:10px;
+}
+.main_a {
+    font-size:1em;
+}
+.title_1 {
+    font-size:2em;
+}
+.title_2 {
+    font-size: 1.5em;
+}

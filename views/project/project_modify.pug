@@ -1,0 +1,114 @@
+extends ../layout
+block content
+    h1.title_1 프로젝트 관리
+    // main 시작
+    div.main
+        //main_content navbar
+        div.main_nav
+            nav.navbar.navbar-light.bg-light
+            .container-fluid
+                a.main_a.navbar-brand(href='/project') 프로젝트 정보 등록
+                a.main_a.navbar-brand(href='/project/modify') 프로젝트 정보 수정
+                a.main_a.navbar-brand(href='/project/view') 프로젝트 정보 조회
+        //main_content 
+        div.main_conent
+            h3.title_2 프로젝트 정보 수정
+            div.table_div
+                //검색창 시작
+                form.row.row-cols-lg-auto.g-3.align-items-center(action='/project/modify/search' method='get')               
+                    .col-1
+                        label 검색어
+                    .col-2
+                        input#project_id.form-control(type='text' name = 'project_id' placeholder='프로젝트 번호')
+                    .col-3
+                        //- button.btn.btn-primary(type='submit') 조회
+                        button#check.btn.btn-primary(type='submit') 조회 
+                if projects
+                    for project in projects[0]
+                        //table 시작
+                        form(method='post')
+                        table.table.table-bordered
+                            tbody
+                                tr
+                                    td 프로젝트 번호
+                                    td 
+                                        input#project_id_.form-control(type='text' aria-label='Project id' value = `${project.project_id}`)  
+                                    td 프로젝트명
+                                    td 
+                                        input#project_name.form-control(type='text' aria-label='Project name' value = `${project.project_name}`) 
+                                tr
+                                    td 착수일자
+                                    td 
+                                        input#project_start_date.textbox-n(placeholder=`${project.project_start_date}` type='text' onfocus="(this.type='date')" onblur="(this.type='text')" value = `${project.project_start_date}`)
+                                    td 종료일자
+                                    td 
+                                        input#project_terminate_date.textbox-n(placeholder=`${project.project_start_date}` type='text' onfocus="(this.type='date')" onblur="(this.type='text')" value = `${project.project_terminate_date}`)
+                                tr
+                                    td 발주처
+                                    td 
+                                        input#customer_name.form-control(type='text' aria-label='Customer name' value = `${project.customer_id}`) 
+                                    td 프로젝트 규모
+                                    td 
+                                        input#project_type.form-control(type='text' aria-label='Project type' value = `${project.project_type}`) 
+                        h4 참여 직원 목록
+                        table.table
+                            thead
+                                tr
+                                    th(scope='col') 사번
+                                    th(scope='col') 참여 날짜
+                                    th(scope='col') 종료 날짜
+                                    th(scope='col') 직무
+                            tbody
+                            for project in projects[1]
+                                tr
+                                    td#empID #{project.employee_id}
+                                    td#pDate #{project.project_participate_date}
+                                    td#pEndDate #{project.project_participate_end_date}
+                                    td#dRole #{project.developer_role_id}
+            a#submit_total.btn.btn-primary 저장
+            div.table_div
+                h3.title_2 팀원 추가
+                //검색창 시작(팀원추가 위한 이름으로 조회)
+                form.row.row-cols-lg-auto.g-3.align-items-center(action='/project/modify/search/employee' method='get')               
+                    .col-1
+                        label 검색어
+                    .col-2
+                        input#project_id.form-control(type='text' name = 'project_id' placeholder='프로젝트 번호')
+                    .col-2
+                        input#emp_name.form-control(type='text' name = 'emp_name' placeholder='이름')
+                    .col-3
+                        button#check.btn.btn-primary(type='submit') 조회 
+            //팀원 조회 시작
+            .view_clerk
+                table.table
+                    thead
+                        tr
+                            th(scope='col') 이름
+                            th(scope='col') 사번
+                            th(scope='col') 부서
+                            th(scope='col') 직위
+                            th(scope='col') 직무 아이디
+                            th
+                    tbody
+                    if employees
+                        h3.title_2 프로젝트 번호 : 
+                        p#projectID #{employees[1]}
+                        for employee in employees[0]
+                            tr
+                                td#employee_name2 #{employee.employee_name}
+                                td#employee_id2 #{employee.employee_id}
+                                td#department_name2 #{employee.department_id}
+                                td#role_id2 #{employee.rold_id}
+                                //- td#modify
+                                td
+                                    input#developer_role_id.form-control(type='text' aria-label='Developer role id')  
+                                td
+                                    button#add.btn.btn-primary(type='button') 추가
+                script(src="https://unpkg.com/axios/dist/axios.min.js")
+                script(src ="/javascripts/project_modify.js")
+
+                       
+
+ 
+        
+

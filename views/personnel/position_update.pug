@@ -1,0 +1,49 @@
+extends ../layout
+
+block content
+    h1.title_1 직원 관리
+    // main 시작
+    div.main
+        //main_content navbar
+        div.main_nav
+            nav.navbar.navbar-light.bg-light
+            .container-fluid
+                a.main_a.navbar-brand(href='/personnel') 인사 정보 등록
+                a.main_a.navbar-brand(href='/personnel/personnel_modify') 인사 정보 수정
+                a.main_a.navbar-brand(href='/personnel/personnel_search') 인사 정보 조회
+                a.main_a.navbar-brand(href='/personnel/department_info') 부서 조회
+                a.main_a.navbar-brand(href='/personnel/position_update') 직급 변경
+                a.main_a.navbar-brand(href='/personnel/department_update') 부서 변경
+        //main_content 
+        div.main_conent
+            h3.title_2 직급 변경
+            //검색창 시작
+            form(method='post').row.row-cols-lg-auto.g-3.align-items-center
+                .col-2 
+                    label 사번
+                .col-3
+                    input#inlineFormSelectPref.form-control(type='text' name='employee_id',value='사번')
+                .col-2 
+                    label 직급 
+                .col-4
+                    input#inlineFormSelectPref.form-control(type='text' name='position_id',value='직급번호')
+                .col-2 
+                    label 사번
+                .col-1-1
+                    input#inlineFormSelectPref.form-control(type='text' name='new_employee_id',value='new 사번')
+                .col-2 
+                    label 직급
+                .col-1-2
+                    input#inlineFormSelectPref.form-control(type='text' name='new_position_id',value='new 직급번호')
+                .col-1-3
+                    button.btn.btn-primary(type='submit') 변경
+
+                            
+
+
+        
+
+            
+
+
+              

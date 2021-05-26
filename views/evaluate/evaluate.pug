@@ -1,0 +1,46 @@
+extends ../layout
+
+block content
+    h1.title_1 평가 관리
+    // main 시작
+    div.main
+        //main_content navbar
+        div.main_nav
+            nav.navbar.navbar-light.bg-light
+            .container-fluid
+                a.main_a.navbar-brand(href='/evaluate') 평가 조회
+                a.main_a.navbar-brand(href='/evaluate/evaluate_avg') 항목 평균 조회
+                a.main_a.navbar-brand(href='/evaluate/submit_e') 직원 평가 정보 입력
+                a.main_a.navbar-brand(href='/evaluate/update_e') 직원 평가 정보 수정
+                a.main_a.navbar-brand(href='/evaluate/submit_c') 고객 평가 정보 입력
+                a.main_a.navbar-brand(href='/evaluate/update_c') 고객 평가 정보 수정
+                a.main_a.navbar-brand(href='/evaluate/submit_p') PM 평가 정보 입력
+                a.main_a.navbar-brand(href='/evaluate/update_p') PM 평가 정보 수정
+        //main_content 
+        div.main_conent
+            h3.title_2 평가 정보 조회
+            //검색창 시작
+            form.row.row-cols-lg-auto.g-3.align-items-center
+                .col-1
+                    label 사번
+                .col-2
+                    input#inlineFormInputGroupUsername.form-control(type='text' placeholder='사번')
+                .col-2
+                    label 프로젝트 번호
+                .col-2
+                    input#inlineFormSelectPref.form-control(type='text' placeholder='프로젝트번호')
+                .col-3
+                    button.btn.btn-primary(type='submit') 조회
+            //table 시작
+            table.table.test
+                tr
+                    th 이름
+                    th 평가 항목
+                    th 점수
+                    th 코멘트
+                tbody#table1  
+            script
+                include dynamic_table.js
+
+            
+
