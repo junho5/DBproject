@@ -14,9 +14,7 @@ router.get('/web_manage', function (req, res, next) {
       }
   });
 });
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'main' });
-});
+
 
 // 로그인 하는 부분
 router.get('/', function (req, res, next) {
