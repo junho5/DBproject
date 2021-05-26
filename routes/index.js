@@ -47,8 +47,8 @@ router.post('/sign_up', function (req, res, next) {
   var web_manage_id = req.body['web_manage_id'];
   var pass_word = req.body['pass_word'];
   var position_id = req.body['position_id'];
-  var final_graduate = req.body['final_graduate'];
-  maria.query('insert into employee(employee_name,ihidnum,department_id,web_manage_id,pass_word,position_id,final_graduate) values(?,?,?,?,?,?,?)', [employee_name,ihidnum,department_id,web_manage_id,pass_word,position_id,final_graduate], function (err, rows) {
+  var master_check = req.body['master_check'];
+  maria.query('insert into employee(employee_name,ihidnum,department_id,web_manage_id,pass_word,position_id,master_check) values(?,?,?,?,?,?,?)', [employee_name,ihidnum,department_id,web_manage_id,pass_word,position_id,master_check], function (err, rows) {
     if (!err) {
         res.send('success');
     } else {
