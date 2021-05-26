@@ -17,14 +17,14 @@ router.post('/personnel_information', function (req, res, next) {
   var pass_word = req.body['pass_word'];
   var master_check = req.body['master_check'];
 
-  maria.query('INSERT INTO employee(employee_id, employee_name, ihidnum, final_graduate, join_day, web_manage_id, pass_word, master_check ) VALUES (?,?,?,?,?,?,?,?)', [employee_id, employee_name, ihidnum, final_graduate, join_day, web_manage_id, pass_word, master_check],function (err, result) {
+  maria.query('INSERT INTO employee(employee_id, employee_name, ihidnum, final_graduate, join_day, web_manage_id, pass_word, master_check) VALUES (?,?,?,?,?,?,?,?)', [employee_id, employee_name, ihidnum, final_graduate, join_day, web_manage_id, pass_word, master_check],function (err, result) {
     if (!err) {
         res.send('저장 완료');
-  } 
-  else {
+    } 
+    else {
       res.send('error : ' + err);
-  }
-});
+    }
+  });
 });
 
 router.get('/personnel_modify', function(req, res, next) {
