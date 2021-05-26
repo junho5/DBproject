@@ -12,12 +12,13 @@ router.post('/personnel_information', function (req, res, next) {
   var employee_name = req.body['employee_name']; 
   var ihidnum = req.body['ihidnum']; 
   var join_day = req.body['join_day'];
+  var end_day = req.body['end_day'];
   var final_graduate = req.body['final_graduate'];
   var web_manage_id = req.body['web_manage_id'];
   var pass_word = req.body['pass_word'];
   var master_check = req.body['master_check'];
 
-  maria.query('INSERT INTO employee(employee_id, employee_name, ihidnum, final_graduate, join_day, web_manage_id, pass_word, master_check) VALUES (?,?,?,?,?,?,?,?)', [employee_id, employee_name, ihidnum, final_graduate, join_day, web_manage_id, pass_word, master_check],function (err, result) {
+  maria.query('INSERT INTO employee(employee_id, employee_name, ihidnum, join_day, end_day, final_graduate, web_manage_id, pass_word, master_check) VALUES (?,?,?,?,?,?,?,?,?)', [employee_id, employee_name, ihidnum, join_day, end_day, final_graduate, web_manage_id, pass_word, master_check],function (err, result) {
     if (!err) {
         res.send('저장 완료');
     } 
