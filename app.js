@@ -15,6 +15,8 @@ var evaluateRouter = require('./routes/evaluate');
 var projectRouter = require('./routes/project');
 
 var app = express();
+var maria = require('./maria');
+maria.connect();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
