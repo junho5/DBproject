@@ -10,14 +10,14 @@ router.get('/', function(req, res, next) {
   
   if (start && end) {
   var sql ='SELECT project_id, project_name, DATE_FORMAT(project_start_date,\'%Y-%m-%d\') project_start_date, DATE_FORMAT(project_terminate_date,\'%Y-%m-%d\') project_terminate_date, ' +
-            'project_type, customer_id FROM project WHERE project_start_date >= \"'+start+'\" AND project_terminate_date <= \"'+end+'\"  ORDER BY project_terminate_date DESC';
+            'project_type, customer_id FROM project WHERE project_start_date >= \"'+start+'\" AND project_terminate_date <= \"'+end+'\"  ORDER BY project_terminate_date';
   
   console.log(start);
   console.log(end);
   }
   else {
     var sql ='SELECT project_id, project_name, DATE_FORMAT(project_start_date,\'%Y-%m-%d\') project_start_date, DATE_FORMAT(project_terminate_date,\'%Y-%m-%d\') project_terminate_date, ' +
-            'project_type, customer_id FROM project ORDER BY project_terminate_date DESC';
+            'project_type, customer_id FROM project ORDER BY project_terminate_date';
   }
 
   maria.query(sql, function (err, rows) {
