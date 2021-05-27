@@ -3,12 +3,12 @@ extends ../layout
 include ../includes/_paginate
 
 block content
+  h1.title_1 프로젝트 목록 보기
+    if rows.length > 0
+      .small Total #{rows.length} project(s)
   .container
 
-    h1.main-title
-      | 프로젝트 목록 보기
-      if rows.length > 0
-        .small Total #{rows.length} project(s)
+    
     
     form.float-right(action='/projects', method='GET')
       input(type='date', value='YYYY-MM-DD', name="start")

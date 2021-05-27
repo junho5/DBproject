@@ -39,9 +39,9 @@ block content
                                 td 입사 일자
                                 td 
                                     input(type='date' name='join_day')
-                                td 퇴사 일자
+                                td 관리자
                                 td 
-                                    input(type='date' name='end_day') 
+                                    input(type='text' name='master_check' placeholder='ex) Y')
                             tr
                                 td 웹 아이디
                                 td 
@@ -49,8 +49,5 @@ block content
                                 td 비밀번호
                                 td 
                                     input(type='text' name='pass_word')
-                            tr
-                                td 관리자
-                                td 
-                                    input(type='text' name='master_check' placeholder='ex) Y')
+                            
                     button.btn.btn-primary(type='submit') 저장

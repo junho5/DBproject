@@ -80,7 +80,7 @@ block content
                                     td 커뮤니케이션
                                     td #{evaluate.pm_cmnct_grade}
                                     td #{evaluate.pm_cmnct_evl_content}
-                        //table-PM평가
+                        //table-동료평가
                         for evaluate in evaluates[2]
                             table.table.test
                                 h2.title_2 동료 평가
@@ -97,7 +97,7 @@ block content
                                     td 업무 수행
                                     td #{evaluate.employee_duty_grade}
                                     td #{evaluate.employee_duty_evl_content}
-                                    td(rowspan=2) #{evaluate.employee_p_evl_id}
+                                    td(rowspan=2) #{evaluate.emp_p_evl_id}
                                     td(rowspan=2) #{evaluate.project_id}
                                 tr
                                     td 커뮤니케이션
@@ -110,4 +110,3 @@ block content
 
               
                 
-

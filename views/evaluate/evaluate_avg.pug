@@ -42,25 +42,29 @@ block content
           th 평균 점수
         
         if(rows)
-          each index in rows[0]
-            tr
+          tr
+            each index in rows[0]
               th #{index.employee_name}
+            each index in rows[1]
               th #{index.count}
-              th 직원평가
+            each index in rows[2]
+              th 동료평가
               th #{index.avg}
-          
-          each index in rows[1]
-            tr
+          tr
+            each index in rows[0]
               th #{index.employee_name}
+            each index in rows[3]
               th #{index.count}
+            each index in rows[4]
               th PM평가
               th #{index.avg}
-
-          each index in rows[2]
-            tr
+          tr
+            each index in rows[0]
               th #{index.employee_name}
+            each index in rows[5]
               th #{index.count}
               th 고객평가
+            each index in rows[6]
               th #{index.avg}
 
           tbody#table1  
