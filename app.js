@@ -16,7 +16,7 @@ var projectRouter = require('./routes/project');
 
 var app = express();
 
-// view engine setupaa
+// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
