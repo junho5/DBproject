@@ -33,7 +33,7 @@
 직원, 프로젝트 정보를 활용한 검색을 통해 직원, 프로젝트, 평가내용에 해당하는 여러가지 정보들을 조회할 수 있는 각종 기능들과 직급 변경이나 부서 이동시 사번 수정 기능 등을 구현할 범위로 정하였습니다.
 
 <br>
-<img src="./img/Requirements.PNG">
+<img src="./img/Requirements.png">
 
 <br>
 
@@ -47,14 +47,14 @@
 ⚫ 배포(호스팅): Heroku <br>
 
 <br>
-<img src="./img/Structure.PNG">
+<img src="./img/Structure.png">
 
 <br>
 
 ## 5. ERD
 
 <br>
-<img src="./img/ERD.PNG">
+<img src="./img/ERD.png">
 
 <br>
 
